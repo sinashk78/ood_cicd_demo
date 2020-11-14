@@ -15,3 +15,15 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - run: docker push sinashk/odd-cicd-demo
+      - uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            docker pull sinashk/odd-cicd-demo
+            docker stop demo
+            docker rm demo
+            docker run -d --name demo -p 80:3000 sinashk/odd-cicd-demo
+
