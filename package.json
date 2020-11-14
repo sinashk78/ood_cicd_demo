@@ -1,0 +1,19 @@
+{
+  "name": "ood_cicd_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch-all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "supertest": "^6.0.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
