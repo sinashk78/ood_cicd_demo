@@ -6,7 +6,7 @@ on:
       name:
         description: 'Sina'
         required: true
-        default: 'World
+        default: 'World'
 jobs:
   say_hello:
     runs-on: ubuntu-latest
