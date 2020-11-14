@@ -21,6 +21,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_KEY }}
           port: ${{ secrets.SERVER_PORT }}
+          password: $${{ secrets.SERVER_PASSWORD }}
           script: |
             docker pull sinashk/odd-cicd-demo
             docker stop demo
