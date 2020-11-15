@@ -6,7 +6,7 @@ app.get("/hello", (req, res) => {
 });
 
 app.get("/bye", (req, res) => {
-  res.send("I'm out, Byeeee!");
+  res.send("Bye!");
 });
 
 module.exports = app;
